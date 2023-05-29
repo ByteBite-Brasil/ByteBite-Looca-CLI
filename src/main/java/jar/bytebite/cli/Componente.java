@@ -69,6 +69,10 @@ public class Componente {
     public Integer FkComponenteParaConfigArmazenamento() {
         return con.queryForObject("select idComponente from componente where total = ?;", Integer.class, armazenamentoTotal);
     }
+    
+        public Integer consultarConfig(String id) {
+        return con.queryForObject("SELECT COUNT(idConfiguracao) FROM configuracao WHERE fk_maquina = ?", Integer.class, id);
+    }
 
     public void inserirConfiguracao(String id) {
         try {

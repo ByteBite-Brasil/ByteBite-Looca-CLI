@@ -37,7 +37,9 @@ public class Login {
         if (credenciais.selectLogin(id, senha)) {
             captura.mostrarInfoSistema();
             comp.inserirComponente();
-            comp.inserirConfiguracao(id);
+            if (comp.consultarConfig(id) < 3) {
+                comp.inserirConfiguracao(id);
+            }
             new Timer().scheduleAtFixedRate(new TimerTask() {
                 @Override
                 public void run() {
@@ -48,6 +50,7 @@ public class Login {
 //                    captura.mostrar();
 //                    comp.mostrar();
                     captura.inserirNoBanco(id, senha, data, hora);
+                    captura.inserirNoBancoMySQL(id, senha, data, hora);
                 }
             }, 0, 10000);
 
