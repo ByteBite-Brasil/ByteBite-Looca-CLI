@@ -27,7 +27,7 @@ public class ConexaoMySQL {
 
         dataSourceMysql.setDriverClassName("com.mysql.cj.jdbc.Driver");
 
-        dataSourceMysql.setUrl("jdbc:mysql://localhost:3306/ByteBite");    
+        dataSourceMysql.setUrl("jdbc:mysql://172.17.0.2/ByteBite?allowPublicKeyRetrieval=true&autoReconnect=true&useSSL=false");    
 
         dataSourceMysql.setUsername("root");
 
