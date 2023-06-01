@@ -1,1 +1,9 @@
+jar\bytebite\cli\Componente.class
+jar\bytebite\cli\ConexaoMySQL.class
+twilio\bytebite\TwilioSms.class
+jar\bytebite\cli\Captura.class
+slack\bytebite\Slack.class
+jar\bytebite\cli\Conexao.class
 jar\bytebite\cli\Login.class
+jar\bytebite\cli\Credenciais.class
+jar\bytebite\cli\Login$1.class

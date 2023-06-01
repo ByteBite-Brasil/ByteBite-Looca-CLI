@@ -43,14 +43,15 @@ public class Login {
             new Timer().scheduleAtFixedRate(new TimerTask() {
                 @Override
                 public void run() {
+                    Captura captura1 = new Captura();
                     //Data 
                     Date dataHoraAtual = new Date();
                     String data = new SimpleDateFormat("dd/MM/yyyy").format(dataHoraAtual);
                     String hora = new SimpleDateFormat("HH:mm:ss").format(dataHoraAtual);
 //                    captura.mostrar();
 //                    comp.mostrar();
-                    captura.inserirNoBanco(id, senha, data, hora);
-                    captura.inserirNoBancoMySQL(id, senha, data, hora);
+                    captura1.inserirNoBanco(id, senha, data, hora);
+                    captura1.inserirNoBancoMySQL(id, senha, data, hora);
                 }
             }, 0, 10000);
 
